@@ -1,3 +1,50 @@
+body {
+  font-family: "Acme";
+  text-align: center;
+  font-size: 25px;
+}
+
 h1 {
-  color: red;
+  color: darkslategray;
+  font-size: 50px;
+  font-family: "Acme";
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.inputs {
+  text-align: center;
+  margin-top: 3%;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+li[id*="letter"] {
+  font-size: 35px;
+  padding-right: 20px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+/*li[id*="place"] {
+  border-top-style: solid;
+  border-top-color: black;
+  padding-right: 20px;
+  text-align: center;
+}*/
+
+.container {
+  text-align: center;
+}
+
+p2 {
+  padding-right: 20px;
+  margin-bottom: 30%;
+
 }
