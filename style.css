@@ -54,3 +54,14 @@ p {
 p.guessed {
   color: black;
 }
+
+.instructions {
+  font-size: 14px;
+}
+.container-two {
+  float:left;
+  margin-top: -20%;
+  margin-left: 10%;
+  background-color: ivory;
+  border-radius: 10px;
+}
