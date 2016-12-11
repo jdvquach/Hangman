@@ -1,7 +1,7 @@
 body {
   font-family: "Acme";
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 h1 {
@@ -25,26 +25,39 @@ li {
   list-style-type: none;
 }
 
-li[id*="letter"] {
-  font-size: 35px;
+li[id*="letter"], li[id*="place"] {
+  font-size: 30px;
   padding-right: 20px;
   text-align: center;
   margin-top: 10%;
+  border-bottom: 1px solid black;
+  border-width: 20px;
 }
 
-/*li[id*="place"] {
-  border-top-style: solid;
-  border-top-color: black;
-  padding-right: 20px;
-  text-align: center;
-}*/
 
 .container {
   text-align: center;
 }
 
-p2 {
-  padding-right: 20px;
-  margin-bottom: 30%;
+#word-to-guess {
+  color:white;
+}
 
+p#word-to-guess.reveal {
+  color:black;
+}
+
+li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, l10, l11, l12
+ {
+  display: inline-block;
+    list-style: none;
+    width: 20px;
+    margin: 0 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: white;
+}
+
+.reveal {
+  color: black;
 }
