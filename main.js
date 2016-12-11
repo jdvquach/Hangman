@@ -1,38 +1,47 @@
-console.log("Hello World");
-
-
 var lives = 0;
+var lettersMatched = 0;
 var usedLetters = [];
-var words = ["test", "cat", "horse"];
-var randomWord = words[Math.floor(Math.random()*words.length)];
-console.log(randomWord);
-var wordChosen = randomWord.toUpperCase();
+var words = ["test", "formidable", "horse"];
+var randomWord = words[Math.floor(Math.random() * words.length)];
+var wordChosen = randomWord.toUpperCase().toString();
 console.log(wordChosen);
 
-
-for (var i=0; i < wordChosen.length; i++) {
-  var createCellPlace = document.createElement("p2");
-  var textCellPlace = document.createTextNode(i+1);
-  createCellPlace.appendChild(textCellPlace);
-  document.body.appendChild(createCellPlace);
-  // var cellPlace = "place-" + (i+1);
-  // document.getElementById(cellPlace).innerHTML =(i+1);
-
-
-  var test = document.querySelector("testcase");
-  var test2 = document.querySelector("p2");
-$( "p2" ).insertBefore( "#place-holder-1" );
+function createTiles() {
+for (var i = 0; i < wordChosen.length; i++) {
+  var letterChosen = wordChosen.charAt(i);
+  console.log(wordChosen.charAt(i));
+  var createTilePlace = document.createElement("li" + i);
+  var textTilePlace = document.createTextNode(letterChosen);
+  createTilePlace.appendChild(textTilePlace);
+  document.body.appendChild(createTilePlace);
+  $("li" + i).insertBefore("p#word-to-guess");
 }
+}
+createTiles();
 
 function chooseWordFunction() {
-  document.getElementById("word-to-guess").innerHTML=wordChosen;
+  document.getElementById("word-to-guess").innerHTML = wordChosen;
 }
+chooseWordFunction();
 
 function resetFunction() {
-  usedLetters=[];
-  lives =0;
+  usedLetters = [];
+  lives = 0;
+  lettersMatched=0;
+  for (var k = 0; k < wordChosen.length; k++) {
+   $("li" + k).remove();
+ }
+ $("p#word-to-guess.reveal").empty(".reveal");
+ $("p1").empty();
   document.querySelector(".guessed").innerHTML = "";
+  randomWord = "";
+  randomWord = words[Math.floor(Math.random() * words.length)];
+  wordChosen = randomWord.toUpperCase().toString();
   chooseWordFunction();
+  letterChosen = null;
+  createTilePlace = null;
+  textTilePlace = null;
+  createTiles();
 }
 
 winMessage = function() {
@@ -52,38 +61,29 @@ lostMessage = function() {
 function myGuessFunction() {
   guessValue = document.querySelector("#guess").value;
   console.log(guessValue);
-  if (wordChosen.includes(guessValue)) {
-    console.log("this letter is included");
-  } else {
+  // document.querySelector("#guess").trigger("reset");
+  $("#guess").val("");
+  if (wordChosen.includes(guessValue)) {} else {
     lives++;
     usedLetters.push(guessValue);
     document.querySelector(".guessed").innerHTML = usedLetters;
-    if (lives===6){
+    if (lives === 6) {
       lostMessage();
+      var revealTwo = document.querySelector("p#word-to-guess");
+      revealTwo.className += "reveal";
     }
-    console.log(lives);
   }
-  for (var i=0; i < wordChosen.length; i++) {
-    if (guessValue===wordChosen[i]){
-      console.log("letter found at" + i);
-      var cellName = "letter-" + (i+1);
-
-      console.log(cellName);
-      document.getElementById(cellName).innerHTML =guessValue;
-      // document.getElementById(cellPlace).innerHTML =(i+1);
-    //   var createAnswerPlace = document.createElement("p3");
-    //   var textAnswerPlace = document.createTextNode(guessValue);
-    //   createAnswerPlace.appendChild(textAnswerPlace);
-    //   document.body.appendChild(createAnswerPlace);
-    //   var test3 = document.querySelector("testcase");
-    //   var test4 = document.querySelector("p2");
-    // $( "p2" ).insertBefore( "#place-holder-1" );
-
+  for (var i = 0; i < wordChosen.length; i++) {
+    if (guessValue === wordChosen[i]) {
+      var reveal = document.querySelector("li" + i);
+      reveal.className += "reveal";
+      lettersMatched++;
+      if (lettersMatched === wordChosen.length) {
+        winMessage();
+      }
+    } else {
+      console.log("Not found at" + i);
 
     }
-    else {
-    console.log("Not found at" + i);
-    }
-
-}
+  }
 }
