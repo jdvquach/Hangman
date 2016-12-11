@@ -65,3 +65,149 @@ p.guessed {
   background-color: ivory;
   border-radius: 10px;
 }
+
+
+
+li#gallow-trunk, li#head, li#body, li#left-arm, li#right-arm, li#left-leg, li#right-leg {
+  display: inline-block;
+}
+
+li#gallow-trunkreveal, li#headreveal, li#bodyreveal, li#left-armreveal, li#right-armreveal, li#left-legreveal, li#right-legreveal {
+  display: inline-block;
+}
+
+li.left, li.right {
+  display: inline-block;
+}
+
+#beam, #gallow-trunk, #body, #left-arm, #left-leg, #right-arm, #right-leg {
+  background-color: white;
+}
+
+#beam.reveal, #gallow-trunk.reveal, #body.reveal, #left-arm.reveal, #left-leg.reveal, #right-arm.reveal, #right-leg.reveal {
+  background-color: black;
+}
+
+
+#mouth, #mouth.reveal {
+  margin-top: 55px;
+  margin-left: 12px;
+  height: 25px;
+  width: 45px;
+  border: 5px solid white;
+  border-color: white transparent transparent transparent;
+  border-radius: 50% / 20px 20px 0 0;
+}
+
+#mouth.reveal {
+  border: 5px solid black;
+  border-color: black transparent transparent transparent;
+}
+#head {
+  border: 3px solid white;
+}
+#head.reveal {
+  border: 3px solid black;
+}
+
+#head, #head.reveal {
+  text-align: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: -13px;
+}
+
+#beam, #beam.reveal {
+  margin-left: 75px;
+  height: 10px;
+  width: 130px;
+  list-style: none;
+}
+
+#gallow-trunk, #gallow-trunk.reveal {
+  height: 100px;
+  width: 5px;
+  list-style: none;
+  margin-bottom: -10px;
+
+}
+
+#body, #body.reveal {
+  height: 130px;
+  width: 5px;
+  list-style: none;
+  margin-bottom: -14px;
+}
+
+#left-arm, #left-arm.reveal {
+  list-style: none;
+  width: 5px;
+  height: 80px;
+  transform: rotate(25deg);
+  margin-bottom: 40px;
+  margin-right: 11px;
+}
+
+#right-arm, #right-arm.reveal {
+  list-style: none;
+  width: 5px;
+  height: 80px;
+  transform: rotate(-25deg);
+  margin-bottom: 40px;
+  margin-left: 11px;
+}
+
+#left-leg, #left-leg.reveal {
+  list-style: none;
+  width: 5px;
+  height: 80px;
+  transform: rotate(25deg);
+  margin-right: 13px;
+  margin-left: -5px;
+}
+
+#right-leg, #right-leg.reveal {
+  list-style: none;
+  width: 5px;
+  height: 80px;
+  transform: rotate(-25deg);
+  margin-left: 13px;
+}
+
+ul {
+  margin: 0 auto;
+  height: 110px;
+}
+div.container-three {
+  margin: 0 auto;
+  width: 350px;
+  text-align: center;
+  margin-top: -28%;
+  margin-right: 15%;
+}
+
+@media only screen and (max-width: 1024px){
+  div.container-three {
+    margin-top: -45%;
+    margin-right: 5%;
+  }
+
+  div.container-two {
+    margin-top: -25%;
+    margin-left: 5%;
+
+  }
+}
+
+@media only screen and (max-width: 768px){
+  div.container-three {
+    margin-top: -50%;
+    margin-right: 5%;
+  }
+
+  div.container-two {
+    margin-top: -25%;
+    margin-left: 5%;
+  }
+  }
