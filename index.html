@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,43 +9,38 @@
   <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet" type="text/css">
   <title>Document</title>
 </head>
+
 <body>
   <h1>Hangman     <span class="title">by Stephen Gibbs</span></h1>
-<p>Build in Progress</p>
-<ul class="inputs">
-  <input type="text" value="" maxlength=1 minlength=1 id="guess" placeholder="Please Guess A Letter"/>
-  <button onclick="myGuessFunction()">Submit Letter</button>
-  <button onclick="resetFunction()">Reset</button>
-</ul>
-<div class="container">
 
-  <p id="word-to-guess"></p>
+  <ul class="inputs">
+    <input type="text" value="" maxlength=1 minlength=1 id="guess" placeholder="Please Guess A Letter"/>
+    <button onclick="myGuessFunction()">Submit</button>
+    <button onclick="resetFunction()">Reset</button>
+  </ul>
+  <div class="container">
+
+    <p id="word-to-guess"></p>
     <p id="letters-to-guess"></p>
-<ul>
+    <ul>
 
 
-</ul>
-<p id="place-holder-1">
+    </ul>
+    <p id="place-holder-1">
+    </p>
 
-</p>
-<ul>
-  
-</ul>
-<br>
-<hr>
-<br>
+    <br>
+    <hr>
+    <br>
 
-<ul>
+    <ul>
+      <p>Letters Not Found</p>
+      <p class="guessed"></p>
 
-
-
-<p>Letters Not Found</p>
-
-<p class="guessed"></p>
-
-</ul>
-</div>
+    </ul>
+  </div>
   <script src="jquery-3.1.0.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 var lives = 0;
 var lettersMatched = 0;
 var usedLetters = [];
-var words = ["test", "formidable", "horse"];
+var words = ["test", "formidable", "horse","optician","politician","generous","beautiful","neighbour","territory","similarity","culture","difference"];
 var randomWord = words[Math.floor(Math.random() * words.length)];
 var wordChosen = randomWord.toUpperCase().toString();
 console.log(wordChosen);
@@ -58,16 +58,25 @@ lostMessage = function() {
   document.body.appendChild(createLostMessage);
 };
 
+// $("input#guess").keydown(function(){
+//   var key=e.which;
+//   if (key==13){
+//     $("input#guess").submit();
+//   }
+// });
+
+
 function myGuessFunction() {
-  guessValue = document.querySelector("#guess").value;
+  guessValue = document.querySelector("#guess").value.toUpperCase();
   console.log(guessValue);
-  // document.querySelector("#guess").trigger("reset");
   $("#guess").val("");
+
+
   if (wordChosen.includes(guessValue)) {} else {
     lives++;
     usedLetters.push(guessValue);
     document.querySelector(".guessed").innerHTML = usedLetters;
-    if (lives === 6) {
+    if (lives === 9) {
       lostMessage();
       var revealTwo = document.querySelector("p#word-to-guess");
       revealTwo.className += "reveal";

@@ -3,61 +3,54 @@ body {
   text-align: center;
   font-size: 30px;
 }
-
 h1 {
   color: darkslategray;
   font-size: 50px;
   font-family: "Acme";
   text-align: center;
 }
-
 .title {
   font-size: 20px;
 }
-
 .inputs {
   text-align: center;
   margin-top: 3%;
 }
-
-li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-li[id*="letter"], li[id*="place"] {
-  font-size: 30px;
-  padding-right: 20px;
-  text-align: center;
-  margin-top: 10%;
-  border-bottom: 1px solid black;
-  border-width: 20px;
-}
-
-
 .container {
   text-align: center;
 }
-
 #word-to-guess {
-  color:white;
+  color: white;
 }
-
 p#word-to-guess.reveal {
-  color:black;
+  color: black;
 }
-
-li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, l10, l11, l12
- {
+li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, l10, l11, l12 {
   display: inline-block;
-    list-style: none;
-    width: 20px;
-    margin: 0 5px;
-    border-bottom: 1px solid black;
-    text-align: center;
-    color: white;
+  list-style: none;
+  width: 20px;
+  margin: 0 5px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  color: white;
+}
+.reveal {
+  color: black;
+}
+input {
+  font-size: 16px;
+  background-color: ivory;
+  width: auto;
+  text-align: center;
+}
+button {
+  font-size: 16px;
 }
 
-.reveal {
+p {
+  color: darkslategray;
+}
+
+p.guessed {
   color: black;
 }
