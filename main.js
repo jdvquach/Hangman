@@ -1,6 +1,7 @@
 var lives = 0;
 var lettersMatched = 0;
 var usedLetters = [];
+var submittedLetters = [];
 var swedishWords = ["zlatan", "dumma", "sprattelgubbe"];
 var frenchWords = ["bonjour","ça","petit","anglais"];
 var englishWords = ["test", "formidable", "horse","optician","politician","generous","beautiful","neighbour","territory","similarity","culture","difference"];
@@ -100,6 +101,14 @@ lostMessage = function() {
 function myGuessFunction() {
   guessValue = document.querySelector("#guess").value.toUpperCase();
   console.log(guessValue);
+
+ if (submittedLetters.includes(guessValue)) {
+   alert("letter has been used");
+   return;
+ } else {
+   submittedLetters.push(guessValue);
+ }
+
   $("#guess").val("");
 
 
