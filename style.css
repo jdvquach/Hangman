@@ -25,8 +25,7 @@ h1 {
 p#word-to-guess.reveal {
   color: black;
 }
-
-li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, li15  {
+li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, li15 {
   display: inline-block;
   list-style: none;
   width: 20px;
@@ -35,6 +34,7 @@ li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, 
   text-align: center;
   color: white;
 }
+
 .reveal {
   color: black;
 }
@@ -47,49 +47,37 @@ input {
 button {
   font-size: 16px;
 }
-
 p {
   color: darkslategray;
 }
-
 p.guessed {
   color: black;
 }
-
 .instructions {
   font-size: 14px;
 }
 .container-two {
-  float:left;
+  float: left;
   margin-top: -20%;
   margin-left: 10%;
   background-color: ivory;
   border-radius: 10px;
 }
-
-
-
 li#gallow-trunk, li#head, li#body, li#left-arm, li#right-arm, li#left-leg, li#right-leg {
   display: inline-block;
 }
-
 li#gallow-trunkreveal, li#headreveal, li#bodyreveal, li#left-armreveal, li#right-armreveal, li#left-legreveal, li#right-legreveal {
   display: inline-block;
 }
-
 li.left, li.right {
   display: inline-block;
 }
-
 #beam, #gallow-trunk, #body, #left-arm, #left-leg, #right-arm, #right-leg {
   background-color: white;
 }
-
 #beam.reveal, #gallow-trunk.reveal, #body.reveal, #left-arm.reveal, #left-leg.reveal, #right-arm.reveal, #right-leg.reveal {
   background-color: black;
 }
-
-
 #mouth, #mouth.reveal {
   margin-top: 55px;
   margin-left: 12px;
@@ -99,7 +87,6 @@ li.left, li.right {
   border-color: white transparent transparent transparent;
   border-radius: 50% / 20px 20px 0 0;
 }
-
 #mouth.reveal {
   border: 5px solid black;
   border-color: black transparent transparent transparent;
@@ -110,7 +97,6 @@ li.left, li.right {
 #head.reveal {
   border: 3px solid black;
 }
-
 #head, #head.reveal {
   text-align: center;
   height: 80px;
@@ -118,29 +104,24 @@ li.left, li.right {
   border-radius: 50%;
   margin-bottom: -13px;
 }
-
 #beam, #beam.reveal {
   margin-left: 75px;
   height: 10px;
   width: 130px;
   list-style: none;
 }
-
 #gallow-trunk, #gallow-trunk.reveal {
   height: 100px;
   width: 5px;
   list-style: none;
   margin-bottom: -10px;
-
 }
-
 #body, #body.reveal {
   height: 130px;
   width: 5px;
   list-style: none;
   margin-bottom: -14px;
 }
-
 #left-arm, #left-arm.reveal {
   list-style: none;
   width: 5px;
@@ -149,7 +130,6 @@ li.left, li.right {
   margin-bottom: 40px;
   margin-right: 11px;
 }
-
 #right-arm, #right-arm.reveal {
   list-style: none;
   width: 5px;
@@ -158,7 +138,6 @@ li.left, li.right {
   margin-bottom: 40px;
   margin-left: 11px;
 }
-
 #left-leg, #left-leg.reveal {
   list-style: none;
   width: 5px;
@@ -167,7 +146,6 @@ li.left, li.right {
   margin-right: 13px;
   margin-left: -5px;
 }
-
 #right-leg, #right-leg.reveal {
   list-style: none;
   width: 5px;
@@ -175,7 +153,6 @@ li.left, li.right {
   transform: rotate(-25deg);
   margin-left: 13px;
 }
-
 ul {
   margin: 0 auto;
   height: 110px;
@@ -190,42 +167,34 @@ div.container-three {
 div#push-down {
   margin-top: 20%;
 }
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
   div.container-three {
     margin-top: -25%;
     margin-right: 5%;
   }
-
-div#push-down {
-  margin-top: 26%;
+  div#push-down {
+    margin-top: 26%;
+  }
+  div.container-two {
+    margin-left: 3%
+  }
 }
-
- div.container-two {
-   margin-left: 3%
- }
-
-}
-
-@media only screen and (max-width: 768px){
-
-h1 {
-  font-size: 40px;
-}
-
-body {
-  font-size: 20px;
-}
-
- div#push-down {
-   margin-top: 25%;
- }
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  body {
+    font-size: 20px;
+  }
+  div#push-down {
+    margin-top: 25%;
+  }
   div.container-three {
     width: 175px;
     margin-top: 0%;
     margin-bottom: 10%;
     margin-right: 40%;
   }
-
   div.container-two {
     display: none;
   }
@@ -233,7 +202,6 @@ body {
     margin: 0 auto;
     height: 55px;
   }
-
   #mouth, #mouth.reveal {
     margin-top: 25px;
     margin-left: 7px;
@@ -243,7 +211,6 @@ body {
     border-color: white transparent transparent transparent;
     border-radius: 50% / 10px 10px 0 0;
   }
-
   #mouth.reveal {
     border: 2.5px solid black;
     border-color: black transparent transparent transparent;
@@ -254,7 +221,6 @@ body {
   #head.reveal {
     border: 1.5px solid black;
   }
-
   #head, #head.reveal {
     text-align: center;
     height: 40px;
@@ -262,53 +228,44 @@ body {
     border-radius: 50%;
     margin-bottom: -6.5px;
   }
-
   #beam, #beam.reveal {
     margin-left: 32.5px;
     height: 5px;
     width: 65px;
   }
-
   #gallow-trunk, #gallow-trunk.reveal {
     height: 50px;
     width: 2.5px;
     margin-bottom: -5px;
-
   }
-
   #body, #body.reveal {
     height: 65.5px;
     width: 2.5px;
     margin-bottom: -7px;
   }
-
   #left-arm, #left-arm.reveal {
     width: 2.5px;
     height: 40px;
     margin-bottom: 20px;
     margin-right: 6.5px;
   }
-
   #right-arm, #right-arm.reveal {
     width: 2.5px;
     height: 40px;
     margin-bottom: 20px;
     margin-left: 5.5px;
   }
-
   #left-leg, #left-leg.reveal {
     width: 2.5px;
     height: 40px;
     margin-right: 6.5px;
     margin-left: -2.5px;
   }
-
   #right-leg, #right-leg.reveal {
     width: 2.5px;
     height: 40px;
     margin-left: 6.5px;
   }
-
   button {
     margin: 10px;
   }

@@ -3,9 +3,9 @@ var lettersMatched = 0;
 var usedLetters = [];
 var submittedLetters = [];
 
-var swedishWords = ["zlatan", "dumma", "sprattelgubbe", "dricker", "vatten", "smörgås", "varsågod", "snälla", "kyckling", "jordgubbe", "glaset", "restaurangerna", "tidningarna", "böckerna", "henne", "din", "fågel", "hunden", "björn", "spindel", "krabba", "sköldpadda", "färgglad", "strumporna", "varför", "frågor", "ingen", "förstår", "vilken", "nötköttet", "citronen", "springer", "tvättar", "från", "framför", "fredags", "lördag", "midsommar", "ögonblick", "tolkarna", "polis", "piloterna", "arkitekter", "trötte", "lilla", "öppet", "konstiga", "perfekta", "berömda", "snyggt", "värdefulla", "tvåspråkigt", "dotters", "brors", "familjer", "morfars", "försöker", "behöver", "önskar", "slutar", "kysser", "vägarna", "platsen", "slottet", "trädgård", "område", "kontor", "centrum", "huvudstad", "nöjesfältet", "toaletter", "tillsammans", "pojkvännen", "absolut", "vikingen", "vuxens", "prinsessor", "klockor", "mobilen", "täcke", "kastrullerna", "biljett", "tunnelbana", "innehåller", "träffas", "fjorton", "hundra", "nittio", "tusen", "biblioteket", "lyssnade", "berättade", "tillbaka", "försökte", "kanelbullar", "köttbullar", "lök", "knäckebröd", "tycka" ];
+var swedishWords = ["zlatan", "dumma", "sprattelgubbe", "dricker", "vatten", "smörgås", "varsågod", "snälla", "kyckling", "jordgubbe", "glaset", "restaurangerna", "tidningarna", "böckerna", "henne", "din", "fågel", "hunden", "björn", "spindel", "krabba", "sköldpadda", "färgglad", "strumporna", "varför", "frågor", "ingen", "förstår", "vilken", "nötköttet", "citronen", "springer", "tvättar", "från", "framför", "fredags", "lördag", "midsommar", "ögonblick", "tolkarna", "polis", "piloterna", "arkitekter", "trötte", "lilla", "öppet", "konstiga", "perfekta", "berömda", "snyggt", "värdefulla", "tvåspråkigt", "dotters", "brors", "familjer", "morfars", "försöker", "behöver", "önskar", "slutar", "kysser", "vägarna", "platsen", "slottet", "trädgård", "område", "kontor", "centrum", "huvudstad", "nöjesfältet", "toaletter", "tillsammans", "pojkvännen", "absolut", "vikingen", "vuxens", "prinsessor", "klockor", "mobilen", "täcke", "kastrullerna", "biljett", "tunnelbana", "innehåller", "träffas", "fjorton", "hundra", "nittio", "tusen", "biblioteket", "lyssnade", "berättade", "tillbaka", "försökte", "kanelbullar", "köttbullar", "lök", "knäckebröd", "tycka"];
 
-var frenchWords = ["bonjour", "ça", "petit", "anglais", "la baguette"];
+var frenchWords = ["bonjour", "ça", "petit", "anglais", "la baguette", "la bicyclette", "chaud", "nouveau", "joli", "le poisson", "avec", "boire", "bonsoir", "désolé", "bientôt", "tard", "dimanche", "janvier", "triste", "souffrir", "fatigué", "haïr", "content", "ouest", "nord", "est", "espérer", "frapper", "nager", "courir"];
 
 var englishWords = ["test", "formidable", "horse", "optician", "politician", "generous", "beautiful", "neighbour", "territory", "similarity", "culture", "difference", "balcony", "walrus", "giraffe", "football", "rugby", "apartment", "thousand", "polite", "library", "magazine", "waffle", "eloquent", "righteous", "preacher", "cupboard", "engine", "fork", "knife", "pleasant", "photograph", "airplane", "shipping", "vase", "determine", "ghost", "pelican", "penguin", "kangaroo", "koala", "echidna", "platypus", "monkey", "hospital", "overcoat", "mattress", "salami", "spaghetti", "noodles", "fusion", "kitchen", "manicure", "solidarity", "vengeful", "torso", "frame", "fly", "flight", "ocean", "weaver", "beaver", "gander", "wander", "rainforest", "leafy", "strong", "weak", "temperature", "hammer", "whistle"];
 
@@ -18,9 +18,6 @@ var choice = 1;
 
 document.querySelector("#category").addEventListener("change", function() {
   choice = parseInt(this.value);
-
-  console.log("token change choice is number " + choice + " from dropdown menu");
-
   document.querySelector("#category");
   if (choice === 1) {
     words = englishWords;
@@ -30,8 +27,6 @@ document.querySelector("#category").addEventListener("change", function() {
     words = swedishWords;
   }
 });
-
-
 
 function createTiles() {
   for (var i = 0; i < wordChosen.length; i++) {
@@ -52,7 +47,6 @@ $('#guess').keyup(function(e) {
     myGuessFunction();
   }
 });
-
 
 function chooseWordFunction() {
   document.getElementById("word-to-guess").innerHTML = wordChosen;
@@ -106,19 +100,16 @@ lostMessage = function() {
 function myGuessFunction() {
   guessValue = document.querySelector("#guess").value.toUpperCase();
   console.log(guessValue);
-
   if (submittedLetters.includes(guessValue)) {
     alert("letter has been used");
+    $("#guess").val("");
     return;
   } else {
     submittedLetters.push(guessValue);
   }
-
-  $("#guess").val("");
-
+    $("#guess").val("");
 
   if (wordChosen.includes(guessValue)) {
-
   } else {
     lives++;
     usedLetters.push(guessValue);
@@ -139,8 +130,7 @@ function myGuessFunction() {
         winMessage();
       }
     } else {
-      console.log("Not found at" + i);
-
+      // console.log("Not found at" + i);
     }
   }
 }
