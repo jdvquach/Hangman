@@ -17,6 +17,11 @@
     <input type="text" value="" maxlength=1 minlength=1 id="guess" placeholder="Please Guess A Letter" />
     <button onclick="myGuessFunction()">Submit</button>
     <button onclick="resetFunction()">Reset</button>
+    <select id="category">
+        <option value="1">English</option>
+        <option value="2">Français</option>
+        <option value="3">Svenska</option>
+        </select>
   </ul>
   <div class="container">
 
@@ -28,6 +33,8 @@
       <p class="instructions">Guess each letter to form a word</p>
       <p class="instructions">You have 9 incorrect guesses before you lose.</p>
       <p class="instructions">Use accents for foreign words!</p>
+      <p class="instructions">Change category then hit reset.</p>
+
     </div>
     <br>
     <hr>
