@@ -25,7 +25,8 @@ h1 {
 p#word-to-guess.reveal {
   color: black;
 }
-li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, l10, l11, l12 {
+
+li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, li15  {
   display: inline-block;
   list-style: none;
   width: 20px;
