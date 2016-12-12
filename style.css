@@ -216,12 +216,13 @@ body {
 }
 
  div#push-down {
-   margin-top: 40%;
+   margin-top: 25%;
  }
   div.container-three {
     width: 175px;
-    margin-top: 10%;
-    margin-right: 35%;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    margin-right: 40%;
   }
 
   div.container-two {
@@ -305,5 +306,12 @@ body {
     width: 2.5px;
     height: 40px;
     margin-left: 6.5px;
+  }
+
+  button {
+    padding: 20px;
+  }
+  .container {
+    margin-top: 70px;
   }
 }
