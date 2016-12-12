@@ -2,9 +2,13 @@ var lives = 0;
 var lettersMatched = 0;
 var usedLetters = [];
 var submittedLetters = [];
-var swedishWords = ["zlatan", "dumma", "sprattelgubbe"];
-var frenchWords = ["bonjour", "ça", "petit", "anglais"];
-var englishWords = ["test", "formidable", "horse", "optician", "politician", "generous", "beautiful", "neighbour", "territory", "similarity", "culture", "difference"];
+
+var swedishWords = ["zlatan", "dumma", "sprattelgubbe", "dricker", "vatten", "smörgås", "varsågod", "snälla", "kyckling", "jordgubbe", "glaset", "restaurangerna", "tidningarna", "böckerna", "henne", "din", "fågel", "hunden", "björn", "spindel", "krabba", "sköldpadda", "färgglad", "strumporna", "varför", "frågor", "ingen", "förstår", "vilken", "nötköttet", "citronen", "springer", "tvättar", "från", "framför", "fredags", "lördag", "midsommar", "ögonblick", "tolkarna", "polis", "piloterna", "arkitekter", "trötte", "lilla", "öppet", "konstiga", "perfekta", "berömda", "snyggt", "värdefulla", "tvåspråkigt", "dotters", "brors", "familjer", "morfars", "försöker", "behöver", "önskar", "slutar", "kysser", "vägarna", "platsen", "slottet", "trädgård", "område", "kontor", "centrum", "huvudstad", "nöjesfältet", "toaletter", "tillsammans", "pojkvännen", "absolut", "vikingen", "vuxens", "prinsessor", "klockor", "mobilen", "täcke", "kastrullerna", "biljett", "tunnelbana", "innehåller", "träffas", "fjorton", "hundra", "nittio", "tusen", "biblioteket", "lyssnade", "berättade", "tillbaka", "försökte", "kanelbullar", "köttbullar", "lök", "knäckebröd", "tycka" ];
+
+var frenchWords = ["bonjour", "ça", "petit", "anglais", "la baguette"];
+
+var englishWords = ["test", "formidable", "horse", "optician", "politician", "generous", "beautiful", "neighbour", "territory", "similarity", "culture", "difference", "balcony", "walrus", "giraffe", "football", "rugby", "apartment", "thousand", "polite", "library", "magazine", "waffle", "eloquent", "righteous", "preacher", "cupboard", "engine", "fork", "knife", "pleasant", "photograph", "airplane", "shipping", "vase", "determine", "ghost", "pelican", "penguin", "kangaroo", "koala", "echidna", "platypus", "monkey", "hospital", "overcoat", "mattress", "salami", "spaghetti", "noodles", "fusion", "kitchen", "manicure", "solidarity", "vengeful", "torso", "frame", "fly", "flight", "ocean", "weaver", "beaver", "gander", "wander", "rainforest", "leafy", "strong", "weak", "temperature", "hammer", "whistle"];
+
 var words = englishWords;
 var randomWord = words[Math.floor(Math.random() * words.length)];
 var wordChosen = randomWord.toUpperCase().toString();
