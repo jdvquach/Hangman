@@ -3,8 +3,8 @@ var lettersMatched = 0;
 var usedLetters = [];
 var submittedLetters = [];
 var swedishWords = ["zlatan", "dumma", "sprattelgubbe"];
-var frenchWords = ["bonjour","ça","petit","anglais"];
-var englishWords = ["test", "formidable", "horse","optician","politician","generous","beautiful","neighbour","territory","similarity","culture","difference"];
+var frenchWords = ["bonjour", "ça", "petit", "anglais"];
+var englishWords = ["test", "formidable", "horse", "optician", "politician", "generous", "beautiful", "neighbour", "territory", "similarity", "culture", "difference"];
 var words = englishWords;
 var randomWord = words[Math.floor(Math.random() * words.length)];
 var wordChosen = randomWord.toUpperCase().toString();
@@ -30,24 +30,24 @@ document.querySelector("#category").addEventListener("change", function() {
 
 
 function createTiles() {
-for (var i = 0; i < wordChosen.length; i++) {
-  var letterChosen = wordChosen.charAt(i);
-  console.log(wordChosen.charAt(i));
-  var createTilePlace = document.createElement("li" + i);
-  var textTilePlace = document.createTextNode(letterChosen);
-  createTilePlace.appendChild(textTilePlace);
-  document.body.appendChild(createTilePlace);
-  $("li" + i).insertBefore("p#word-to-guess");
-}
+  for (var i = 0; i < wordChosen.length; i++) {
+    var letterChosen = wordChosen.charAt(i);
+    console.log(wordChosen.charAt(i));
+    var createTilePlace = document.createElement("li" + i);
+    var textTilePlace = document.createTextNode(letterChosen);
+    createTilePlace.appendChild(textTilePlace);
+    document.body.appendChild(createTilePlace);
+    $("li" + i).insertBefore("p#word-to-guess");
+  }
 }
 createTiles();
 
 //Recognise enter key as a valid submit function
-$('#guess').keyup(function (e) {
-    if (e.keyCode === 13) {
-       myGuessFunction();
-    }
-  });
+$('#guess').keyup(function(e) {
+  if (e.keyCode === 13) {
+    myGuessFunction();
+  }
+});
 
 
 function chooseWordFunction() {
@@ -57,23 +57,24 @@ chooseWordFunction();
 
 function resetFunction() {
   usedLetters = [];
+  submittedLetters = [];
   lives = 0;
-  lettersMatched=0;
+  lettersMatched = 0;
   for (var k = 0; k < wordChosen.length; k++) {
-   $("li" + k).remove();
- }
-$("p#word-to-guess.reveal").empty(".reveal");
-$("p#word-to-guess").removeClass();
-$("li#body").removeClass();
-$("li#left-arm").removeClass();
-$("li#left-leg").removeClass();
-$("li#right-arm").removeClass();
-$("li#right-leg").removeClass();
-$("li#head").removeClass();
-$("li#gallow-trunk").removeClass();
-$("li#beam").removeClass();
-$("div#mouth").removeClass();
- $("p1").empty();
+    $("li" + k).remove();
+  }
+  $("p#word-to-guess.reveal").empty(".reveal");
+  $("p#word-to-guess").removeClass();
+  $("li#body").removeClass();
+  $("li#left-arm").removeClass();
+  $("li#left-leg").removeClass();
+  $("li#right-arm").removeClass();
+  $("li#right-leg").removeClass();
+  $("li#head").removeClass();
+  $("li#gallow-trunk").removeClass();
+  $("li#beam").removeClass();
+  $("div#mouth").removeClass();
+  $("p1").empty();
   document.querySelector(".guessed").innerHTML = "";
   randomWord = "";
   randomWord = words[Math.floor(Math.random() * words.length)];
@@ -102,12 +103,12 @@ function myGuessFunction() {
   guessValue = document.querySelector("#guess").value.toUpperCase();
   console.log(guessValue);
 
- if (submittedLetters.includes(guessValue)) {
-   alert("letter has been used");
-   return;
- } else {
-   submittedLetters.push(guessValue);
- }
+  if (submittedLetters.includes(guessValue)) {
+    alert("letter has been used");
+    return;
+  } else {
+    submittedLetters.push(guessValue);
+  }
 
   $("#guess").val("");
 
@@ -142,40 +143,32 @@ function myGuessFunction() {
 
 
 function revealHangman() {
-  if(lives===1){
+  if (lives === 1) {
     var reveal3 = document.querySelector("li#body");
-    reveal3.className +="reveal";
-  }
-  else if(lives===2){
+    reveal3.className += "reveal";
+  } else if (lives === 2) {
     var reveal4 = document.querySelector("li#head");
-    reveal4.className +="reveal";
-  }
-  else if(lives===3){
+    reveal4.className += "reveal";
+  } else if (lives === 3) {
     var reveal5 = document.querySelector("li#left-arm");
-    reveal5.className +="reveal";
-  }
-  else if(lives===4){
+    reveal5.className += "reveal";
+  } else if (lives === 4) {
     var reveal6 = document.querySelector("li#right-arm");
-    reveal6.className +="reveal";
-  }
-  else if(lives===5){
+    reveal6.className += "reveal";
+  } else if (lives === 5) {
     var reveal7 = document.querySelector("li#left-leg");
-    reveal7.className +="reveal";
-  }
-  else if(lives===6){
+    reveal7.className += "reveal";
+  } else if (lives === 6) {
     var reveal8 = document.querySelector("li#right-leg");
-    reveal8.className +="reveal";
-  }
-  else if(lives===7){
+    reveal8.className += "reveal";
+  } else if (lives === 7) {
     var reveal9 = document.querySelector("li#gallow-trunk");
-    reveal9.className +="reveal";
-  }
-  else if(lives===8){
+    reveal9.className += "reveal";
+  } else if (lives === 8) {
     var reveal10 = document.querySelector("li#beam");
-    reveal10.className +="reveal";
-  }
-  else if (lives===9){
+    reveal10.className += "reveal";
+  } else if (lives === 9) {
     var reveal11 = document.querySelector("div#mouth");
-    reveal11.className +="reveal";
+    reveal11.className += "reveal";
   }
 }
