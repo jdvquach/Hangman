@@ -183,30 +183,127 @@ div.container-three {
   margin: 0 auto;
   width: 350px;
   text-align: center;
-  margin-top: -28%;
+  margin-top: -20%;
   margin-right: 15%;
 }
-
+div#push-down {
+  margin-top: 20%;
+}
 @media only screen and (max-width: 1024px){
   div.container-three {
-    margin-top: -45%;
+    margin-top: -25%;
     margin-right: 5%;
   }
 
-  div.container-two {
-    margin-top: -25%;
-    margin-left: 5%;
+div#push-down {
+  margin-top: 26%;
+}
 
-  }
+ div.container-two {
+   margin-left: 3%
+ }
+
 }
 
 @media only screen and (max-width: 768px){
+
+h1 {
+  font-size: 40px;
+}
+
+body {
+  font-size: 20px;
+}
+
+ div#push-down {
+   margin-top: 40%;
+ }
   div.container-three {
-    margin-top: -50%;
-    margin-right: 5%;
+    width: 175px;
+    margin-top: 10%;
+    margin-right: 35%;
   }
 
   div.container-two {
     display: none;
   }
+  ul {
+    margin: 0 auto;
+    height: 55px;
   }
+
+  #mouth, #mouth.reveal {
+    margin-top: 25px;
+    margin-left: 7px;
+    height: 12.5px;
+    width: 22.5px;
+    border: 2.5px solid white;
+    border-color: white transparent transparent transparent;
+    border-radius: 50% / 10px 10px 0 0;
+  }
+
+  #mouth.reveal {
+    border: 2.5px solid black;
+    border-color: black transparent transparent transparent;
+  }
+  #head {
+    border: 1.5px solid white;
+  }
+  #head.reveal {
+    border: 1.5px solid black;
+  }
+
+  #head, #head.reveal {
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-bottom: -6.5px;
+  }
+
+  #beam, #beam.reveal {
+    margin-left: 32.5px;
+    height: 5px;
+    width: 65px;
+  }
+
+  #gallow-trunk, #gallow-trunk.reveal {
+    height: 50px;
+    width: 2.5px;
+    margin-bottom: -5px;
+
+  }
+
+  #body, #body.reveal {
+    height: 65.5px;
+    width: 2.5px;
+    margin-bottom: -7px;
+  }
+
+  #left-arm, #left-arm.reveal {
+    width: 2.5px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-right: 6.5px;
+  }
+
+  #right-arm, #right-arm.reveal {
+    width: 2.5px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 5.5px;
+  }
+
+  #left-leg, #left-leg.reveal {
+    width: 2.5px;
+    height: 40px;
+    margin-right: 6.5px;
+    margin-left: -2.5px;
+  }
+
+  #right-leg, #right-leg.reveal {
+    width: 2.5px;
+    height: 40px;
+    margin-left: 6.5px;
+  }
+}
