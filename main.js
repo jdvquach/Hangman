@@ -1,10 +1,32 @@
 var lives = 0;
 var lettersMatched = 0;
 var usedLetters = [];
-var words = ["test", "formidable", "horse","optician","politician","generous","beautiful","neighbour","territory","similarity","culture","difference"];
+var swedishWords = ["zlatan", "dumma", "sprattelgubbe"];
+var frenchWords = ["bonjour","ça","petit","anglais"];
+var englishWords = ["test", "formidable", "horse","optician","politician","generous","beautiful","neighbour","territory","similarity","culture","difference"];
+var words = englishWords;
 var randomWord = words[Math.floor(Math.random() * words.length)];
 var wordChosen = randomWord.toUpperCase().toString();
 console.log(wordChosen);
+
+var choice = 1;
+
+document.querySelector("#category").addEventListener("change", function() {
+  choice = parseInt(this.value);
+
+  console.log("token change choice is number " + choice + " from dropdown menu");
+
+  document.querySelector("#category");
+  if (choice === 1) {
+    words = englishWords;
+  } else if (choice === 2) {
+    words = frenchWords;
+  } else if (choice === 3) {
+    words = swedishWords;
+  }
+});
+
+
 
 function createTiles() {
 for (var i = 0; i < wordChosen.length; i++) {

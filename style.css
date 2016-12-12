@@ -207,7 +207,6 @@ div.container-three {
   }
 
   div.container-two {
-    margin-top: -25%;
-    margin-left: 5%;
+    display: none;
   }
   }
