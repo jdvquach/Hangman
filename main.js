@@ -2,6 +2,7 @@ var lives = 0;
 var lettersMatched = 0;
 var usedLetters = [];
 var submittedLetters = [];
+var choice = 1;
 
 var swedishWords = ["zlatan", "dumma", "sprattelgubbe", "dricker", "vatten", "smörgås", "varsågod", "snälla", "kyckling", "jordgubbe", "glaset", "restaurangerna", "tidningarna", "böckerna", "henne", "din", "fågel", "hunden", "björn", "spindel", "krabba", "sköldpadda", "färgglad", "strumporna", "varför", "frågor", "ingen", "förstår", "vilken", "nötköttet", "citronen", "springer", "tvättar", "från", "framför", "fredags", "lördag", "midsommar", "ögonblick", "tolkarna", "polis", "piloterna", "arkitekter", "trötte", "lilla", "öppet", "konstiga", "perfekta", "berömda", "snyggt", "värdefulla", "tvåspråkigt", "dotters", "brors", "familjer", "morfars", "försöker", "behöver", "önskar", "slutar", "kysser", "vägarna", "platsen", "slottet", "trädgård", "område", "kontor", "centrum", "huvudstad", "nöjesfältet", "toaletter", "tillsammans", "pojkvännen", "absolut", "vikingen", "vuxens", "prinsessor", "klockor", "mobilen", "täcke", "kastrullerna", "biljett", "tunnelbana", "innehåller", "träffas", "fjorton", "hundra", "nittio", "tusen", "biblioteket", "lyssnade", "berättade", "tillbaka", "försökte", "kanelbullar", "köttbullar", "lök", "knäckebröd", "tycka"];
 
@@ -13,8 +14,6 @@ var words = englishWords;
 var randomWord = words[Math.floor(Math.random() * words.length)];
 var wordChosen = randomWord.toUpperCase().toString();
 console.log(wordChosen);
-
-var choice = 1;
 
 document.querySelector("#category").addEventListener("change", function() {
   choice = parseInt(this.value);
@@ -52,6 +51,7 @@ function chooseWordFunction() {
   document.getElementById("word-to-guess").innerHTML = wordChosen;
 }
 chooseWordFunction();
+spaceFunction();
 
 function resetFunction() {
   usedLetters = [];
@@ -78,6 +78,7 @@ function resetFunction() {
   randomWord = words[Math.floor(Math.random() * words.length)];
   wordChosen = randomWord.toUpperCase().toString();
   chooseWordFunction();
+  spaceFunction();
   createTiles();
 }
 
@@ -96,6 +97,15 @@ lostMessage = function() {
   document.body.appendChild(createLostMessage);
   $("p1").insertAfter("p#word-to-guess");
 };
+
+function spaceFunction() { //to deal with space for french words which include the article le or la
+  if (wordChosen.includes(" ")){
+    submittedLetters.push(" ");
+    lettersMatched++;
+  } else {
+    // console.log("does not include a space");
+  }
+}
 
 function myGuessFunction() {
   guessValue = document.querySelector("#guess").value.toUpperCase();
