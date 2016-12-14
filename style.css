@@ -21,6 +21,7 @@ h1 {
 }
 #word-to-guess {
   color: white;
+  user-select: none;
 }
 p#word-to-guess.reveal {
   color: black;
@@ -36,6 +37,7 @@ li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, 
   border-bottom: 1px solid black;
   text-align: center;
   color: white;
+  user-select: none;
 }
 
 .reveal {
@@ -50,8 +52,6 @@ input {
 button {
   font-size: 16px;
 }
-
-
 
 #dialog {
   font-size: 18px;
