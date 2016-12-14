@@ -27,6 +27,8 @@ document.querySelector("#category").addEventListener("change", function() {
   }
 });
 
+
+
 function createTiles() {
   for (var i = 0; i < wordChosen.length; i++) {
     var letterChosen = wordChosen.charAt(i);
@@ -111,7 +113,10 @@ function myGuessFunction() {
   guessValue = document.querySelector("#guess").value.toUpperCase();
   console.log(guessValue);
   if (submittedLetters.includes(guessValue)) {
-    alert("letter has been used");
+    $( function() {
+        $( "#dialog" ).dialog();
+      } );
+    // alert("letter has been used");
     $("#guess").val("");
     return;
   } else {
