@@ -27,9 +27,7 @@ p#word-to-guess.reveal {
   color: black;
 }
 
-
-
-li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, li15 {
+li#cell0,li#cell1,li#cell2,li#cell3,li#cell4,li#cell5,li#cell6,li#cell7,li#cell8,li#cell9,li#cell10,li#cell11,li#cell12,li#cell13,li#cell14,li#cell15 {
   display: inline-block;
   list-style: none;
   width: 20px;
@@ -39,28 +37,24 @@ li0, li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11, li12, li13, li14, 
   color: white;
   user-select: none;
 }
+/*[id^="cell"] li {
+  color: red;
+}*/
 
 .reveal {
-  color: black;
+  color: black !important;
 }
+
 input {
   font-size: 16px;
   background-color: ivory;
   width: auto;
   text-align: center;
 }
-input, input:before, input:after {
-      -webkit-user-select: initial;
-      -khtml-user-select: initial;
-      -moz-user-select: initial;
-      -ms-user-select: initial;
-      user-select: initial;
-     } 
 
 button {
   font-size: 16px;
 }
-
 #dialog {
   font-size: 18px;
 }

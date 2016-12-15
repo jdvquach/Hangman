@@ -33,11 +33,12 @@ function createTiles() {
   for (var i = 0; i < wordChosen.length; i++) {
     var letterChosen = wordChosen.charAt(i);
     console.log(wordChosen.charAt(i));
-    var createTilePlace = document.createElement("li" + i);
+      var createTilePlace = document.createElement("li");
+      createTilePlace.setAttribute("id", "cell" + i);
     var textTilePlace = document.createTextNode(letterChosen);
     createTilePlace.appendChild(textTilePlace);
     document.body.appendChild(createTilePlace);
-    $("li" + i).insertBefore("p#word-to-guess");
+    $("li#cell" + i).insertBefore("p#word-to-guess");
   }
 }
 createTiles();
@@ -61,7 +62,7 @@ function resetFunction() {
   lives = 0;
   lettersMatched = 0;
   for (var k = 0; k < wordChosen.length; k++) {
-    $("li" + k).remove();
+    $("li#" + k).remove();
   }
   $("p#word-to-guess.reveal").empty(".reveal");
   $("p#word-to-guess").removeClass();
@@ -138,7 +139,7 @@ function myGuessFunction() {
   }
   for (var i = 0; i < wordChosen.length; i++) {
     if (guessValue === wordChosen[i]) {
-      var reveal = document.querySelector("li" + i);
+      var reveal = document.querySelector("li#cell" + i);
       reveal.className += "reveal";
       lettersMatched++;
       if (lettersMatched === wordChosen.length) {
