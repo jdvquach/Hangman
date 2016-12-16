@@ -182,3 +182,10 @@ function revealHangman() {
     reveal11.className += "reveal";
   }
 }
+
+//Mute music
+document.getElementById("soundButton").onclick = function(){
+  var audioNoise = document.getElementById("ambience");
+  audioNoise.muted = !audioNoise.muted;
+  $(this).find('i').toggleClass('fa fa-volume-up fa fa-volume-off');
+};
