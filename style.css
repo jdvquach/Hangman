@@ -2,12 +2,17 @@ body {
   font-family: "Acme";
   text-align: center;
   font-size: 30px;
+  background-color: #BDB48E;
 }
 h1 {
   color: darkslategray;
   font-size: 50px;
   font-family: "Acme";
   text-align: center;
+}
+
+h5 {
+  margin: 0 auto;
 }
 .title {
   font-size: 20px;
@@ -20,7 +25,7 @@ h1 {
   text-align: center;
 }
 #word-to-guess {
-  color: white;
+  color: #BDB48E;
   user-select: none;
 }
 p#word-to-guess.reveal {
@@ -34,7 +39,7 @@ li#cell0,li#cell1,li#cell2,li#cell3,li#cell4,li#cell5,li#cell6,li#cell7,li#cell8
   margin: 0 5px;
   border-bottom: 1px solid black;
   text-align: center;
-  color: white;
+  color: #BDB48E;
   user-select: none;
 }
 /*[id^="cell"] li {
@@ -96,10 +101,11 @@ p.guessed {
 }
 .container-two {
   float: left;
-  margin-top: -20%;
+  margin-top: -18%;
   margin-left: 10%;
   background-color: ivory;
   border-radius: 10px;
+  padding: 4px;
 }
 li#gallow-trunk, li#head, li#body, li#left-arm, li#right-arm, li#left-leg, li#right-leg {
   display: inline-block;
@@ -111,7 +117,7 @@ li.left, li.right {
   display: inline-block;
 }
 #beam, #gallow-trunk, #body, #left-arm, #left-leg, #right-arm, #right-leg {
-  background-color: white;
+  background-color: #BDB48E;
 }
 #beam.reveal, #gallow-trunk.reveal, #body.reveal, #left-arm.reveal, #left-leg.reveal, #right-arm.reveal, #right-leg.reveal {
   background-color: black;
@@ -121,8 +127,8 @@ li.left, li.right {
   margin-left: 12px;
   height: 25px;
   width: 45px;
-  border: 5px solid white;
-  border-color: white transparent transparent transparent;
+  border: 5px solid #BDB48E;
+  border-color: #BDB48E transparent transparent transparent;
   border-radius: 50% / 20px 20px 0 0;
 }
 #mouth.reveal {
@@ -130,7 +136,7 @@ li.left, li.right {
   border-color: black transparent transparent transparent;
 }
 #head {
-  border: 3px solid white;
+  border: 3px solid #BDB48E;
 }
 #head.reveal {
   border: 3px solid black;
@@ -225,7 +231,7 @@ div#push-down {
     font-size: 20px;
   }
   div#push-down {
-    margin-top: 25%;
+    margin-top: 20%;
   }
   div.container-three {
     width: 175px;
@@ -245,8 +251,8 @@ div#push-down {
     margin-left: 7px;
     height: 12.5px;
     width: 22.5px;
-    border: 2.5px solid white;
-    border-color: white transparent transparent transparent;
+    border: 2.5px solid #BDB48E;
+    border-color: #BDB48E transparent transparent transparent;
     border-radius: 50% / 10px 10px 0 0;
   }
   #mouth.reveal {
@@ -254,7 +260,7 @@ div#push-down {
     border-color: black transparent transparent transparent;
   }
   #head {
-    border: 1.5px solid white;
+    border: 1.5px solid #BDB48E;
   }
   #head.reveal {
     border: 1.5px solid black;
