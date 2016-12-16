@@ -38,3 +38,5 @@ Simple Hangman Game written in javascript, jQuery, HTML5 and CSS3.
 - May add more categories to select.  
 
 ## Acknowledgments
+
+- Arrow and ovation sound files attributed to Mike Koenig.  Many thanks.  
