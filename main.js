@@ -33,8 +33,8 @@ function createTiles() {
   for (var i = 0; i < wordChosen.length; i++) {
     var letterChosen = wordChosen.charAt(i);
     console.log(wordChosen.charAt(i));
-      var createTilePlace = document.createElement("li");
-      createTilePlace.setAttribute("id", "cell" + i);
+    var createTilePlace = document.createElement("li");
+    createTilePlace.setAttribute("id", "cell" + i);
     var textTilePlace = document.createTextNode(letterChosen);
     createTilePlace.appendChild(textTilePlace);
     document.body.appendChild(createTilePlace);
@@ -62,7 +62,7 @@ function resetFunction() {
   lives = 0;
   lettersMatched = 0;
   for (var k = 0; k < wordChosen.length; k++) {
-    $("li#" + k).remove();
+    $("li#cell" + k).remove();
   }
   $("p#word-to-guess.reveal").empty(".reveal");
   $("p#word-to-guess").removeClass();
@@ -102,7 +102,7 @@ lostMessage = function() {
 };
 
 function spaceFunction() { //to deal with space for french words which include the article le or la
-  if (wordChosen.includes(" ")){
+  if (wordChosen.includes(" ")) {
     submittedLetters.push(" ");
     lettersMatched++;
   } else {
@@ -114,22 +114,21 @@ function myGuessFunction() {
   guessValue = document.querySelector("#guess").value.toUpperCase();
   console.log(guessValue);
   if (submittedLetters.includes(guessValue)) {
-    $( function() {
-        $( "#dialog" ).dialog();
-      } );
-    // alert("letter has been used");
+    $(function() {
+      $("#dialog").dialog();
+    });
     $("#guess").val("");
     return;
   } else {
     submittedLetters.push(guessValue);
   }
-    $("#guess").val("");
+  $("#guess").val("");
 
-  if (wordChosen.includes(guessValue)) {
-  } else {
+  if (wordChosen.includes(guessValue)) {} else {
     lives++;
     usedLetters.push(guessValue);
     document.querySelector(".guessed").innerHTML = usedLetters;
+    document.getElementById('ping').play();
     revealHangman();
     if (lives === 9) {
       lostMessage();
@@ -143,6 +142,7 @@ function myGuessFunction() {
       reveal.className += "reveal";
       lettersMatched++;
       if (lettersMatched === wordChosen.length) {
+      document.getElementById('ovation').play();
         winMessage();
       }
     } else {
