@@ -13,7 +13,8 @@ Simple Hangman Game written in javascript, jQuery, HTML5 and CSS3.
 - Custom alert box if same letter selected twice.
 - Letters appear if matched and win or lost message on completion.
 - Reset functionality of game.  
-- Mobile responsive.  
+- Mobile responsive.
+- Sound added for backing soundtrack, incorrect answer and for completion of word - with mute toggle.   
 
 
 ## Technology
@@ -22,11 +23,12 @@ Simple Hangman Game written in javascript, jQuery, HTML5 and CSS3.
 - CSS3
 - JavaScript
 - jQuery
--jQuery-ui for dialog widget
+- jQuery-ui for dialog widget
 
 ### Libraries / Plugins
 
 - [jQuery](https://code.jquery.com/jquery-3.1.0.min.js)
+- [jQuery-ui](http://jqueryui.com)
 
 ## Issues / Bugs
 
@@ -34,7 +36,6 @@ Simple Hangman Game written in javascript, jQuery, HTML5 and CSS3.
 
 ## Backlog / Futures Releases
 
-- Add sound on user input or on wrong answer being given.  
 - May add more categories to select.  
 
 ## Acknowledgments
