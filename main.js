@@ -187,5 +187,5 @@ function revealHangman() {
 document.getElementById("soundButton").onclick = function(){
   var audioNoise = document.getElementById("ambience");
   audioNoise.muted = !audioNoise.muted;
-  $(this).find('i').toggleClass('fa fa-volume-up fa fa-volume-off');
+  // $(this).find('i').toggleClass('fa fa-volume-up fa fa-volume-off');
 };
