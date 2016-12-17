@@ -64,10 +64,16 @@ button, select {
 }
 
 button#soundButton {
-  height: 28px;
-  width: 28px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   background-color: ivory;
+  text-align: center;
+}
+
+.fa-volume-off:before, .fa-volume-up:before {
+  text-align: center;
+  vertical-align: middle;
 }
 
 #dialog {
