@@ -17,7 +17,7 @@ h5 {
 .title {
   font-size: 20px;
 }
-.inputs {
+.input-style {
   text-align: center;
   margin-top: 3%;
 }
@@ -50,7 +50,7 @@ li#cell0,li#cell1,li#cell2,li#cell3,li#cell4,li#cell5,li#cell6,li#cell7,li#cell8
   color: black !important;
 }
 
-input {
+/*input {
   font-size: 16px;
   background-color: ivory;
   width: auto;
@@ -61,19 +61,13 @@ button, select {
   font-size: 16px;
   font-family: "Acme";
   border-radius: 5px;
-}
+}*/
 
 button#soundButton {
-  height: 30px;
-  width: 30px;
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   background-color: ivory;
-  text-align: center;
-}
-
-.fa-volume-off:before, .fa-volume-up:before {
-  text-align: center;
-  vertical-align: middle;
 }
 
 #dialog {
