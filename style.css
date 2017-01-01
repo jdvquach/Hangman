@@ -66,6 +66,8 @@ button, select {
 button#soundButton {
   height: 30px;
   width: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: ivory;
   text-align: center;
