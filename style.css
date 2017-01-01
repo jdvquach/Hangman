@@ -73,10 +73,10 @@ button#soundButton {
   text-align: center;
 }
 
-.fa-volume-off:before, .fa-volume-up:before {
+/*.fa-volume-off, .fa-volume-up {
   text-align: center;
   vertical-align: middle;
-}
+}*/
 
 #dialog {
   font-size: 18px;
