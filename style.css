@@ -64,19 +64,19 @@ button, select {
 }
 
 button#soundButton {
-  height: 30px;
+  /*height: 30px;
   width: 30px;
   -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+  -moz-border-radius: 50%;*/
+  border-radius: 20%;
   background-color: ivory;
-  text-align: center;
+  /*text-align: center;*/
 }
 
-/*.fa-volume-off, .fa-volume-up {
+.fa-volume-off, .fa-volume-up {
   text-align: center;
   vertical-align: middle;
-}*/
+}
 
 #dialog {
   font-size: 18px;
