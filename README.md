@@ -17,7 +17,7 @@ Simple Hangman Game written in javascript, jQuery, HTML5 and CSS3.
 - Sound added for backing soundtrack, incorrect answer and for completion of word - with mute toggle.   
 
 
-## Technology
+## Technology.
 
 - HTML5
 - CSS3
